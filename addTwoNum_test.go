@@ -1,14 +1,12 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
 )
 
 func Test_addTwoNum(t *testing.T) {
-	l1 := &ListNode{5, nil}
-	l2 := &ListNode{5, nil}
+	l1 := createLinkList([]int{1,3,5,8,5})
+	l2 := createLinkList([]int{1,3,5,8})
 	res := addTwoNumbers(l1, l2)
-	fmt.Println(res)
-	fmt.Println(res.Next)
+	t.Log(showLinkList(res))
 }

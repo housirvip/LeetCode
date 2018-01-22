@@ -1,12 +1,7 @@
 package leetcode
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	var resTemp, resNode, resHead *ListNode
+func addTwoNumbers(l1 *Node, l2 *Node) *Node {
+	var resTemp, resNode, resHead *Node
 	headNotGot := true
 	overflow := 0
 	value := 0
@@ -21,7 +16,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 			l2 = l2.Next
 		}
 		overflow = value / 10
-		resTemp = &ListNode{Val: value % 10, Next: nil}
+		resTemp = &Node{Val: value % 10, Next: nil}
 		if headNotGot {
 			resHead = resTemp
 			resNode = resHead
